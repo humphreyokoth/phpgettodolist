@@ -14,8 +14,8 @@
 <body>
     <?php
     require_once("./introphp.php");
-    // include ('./db_connnection.php');
-    // $conn = OpenCon();
+    include ('./db_connnection.php');
+     $conn = OpenCon();
 //    // Checking form with input.
 //     $input = isset($_POST["item"])?$_POST["item"]:null;
 //     error_log($input."\n",3,"./php_error.log");
@@ -68,24 +68,17 @@ include 'getTodos.php';
             <div class="list" id="list">
 
                 <ul class="list-li" id="task">
-
-                    
-
                     <?php 
                     $list = todo();
                      while($row = $result->fetch_assoc()) {  ?>
-                       
                         <li>
                             <input type="checkbox" name="checkbox" id="list-1" />
 
-                            <label class="label-2"> <?php  echo "id: " . $row["id"]. " - title: " . $row["title"]. " " . $row["date_added"]. "<br>";
-?></label>
+                            <label class="label-2"> <?php  echo "id: " . $row["id"]. " - title: " . $row["title"]. " " . $row["date_added"]. "<br>";?></label>
                             <i class="fa-solid fa-trash-can deleteIcon"></i>
 
                             <i class="fa-solid fa-pencil editIcon "></i>
                             <!-- <?php echo  $row["date_added"] ?> -->
-                            
-                           
 
                         </li>
                     <?php } ?>
