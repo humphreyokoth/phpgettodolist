@@ -35,11 +35,11 @@
 //     ?>
     <?php
 // include 'addTodos.php';
-include 'getTodos.php';
+ include 'getTodos.php';
 ?>
 
     <div class="container">
-        <form  method="post" action="getTodos.php"  class="addTask" id="addForm" name="todoList">
+        <form  method="get" action="getTodos.php"  class="addTask" id="addForm" name="todoList">
             <div class="row">
                 <div class="col-1">
                     <input type="checkbox" name="checkbox" id="todo-checkbox" checked /><label class="label-1">
@@ -70,7 +70,8 @@ include 'getTodos.php';
                 <ul class="list-li" id="task">
                     <?php 
                     $list = todo();
-                     while($row = $result->fetch_assoc()) {  ?>
+                    $result->fetch_assoc();
+                     while($row = $result->fetch_assoc()) { ?>
                         <li>
                             <input type="checkbox" name="checkbox" id="list-1" />
 

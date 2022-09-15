@@ -4,7 +4,7 @@
     $sql = "SELECT * FROM to_do_list_items";
    
     $result = $conn->query($sql);
-    error_log($result."\n",3,"./php_error.log");
+    //error_log("$result"."\n",3,"./php_error.log");
 
     if ($result->num_rows > 0) {
         // output data of each row
