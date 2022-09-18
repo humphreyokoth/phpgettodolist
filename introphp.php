@@ -19,12 +19,9 @@ function todo(){
 
   $to_do_list = $GLOBALS['to_do_list'];
   return $to_do_list;
-  // foreach($GLOBALS['to_do_list'] as $item){
-  //  echo $item;
-  //  echo "<br/>";
-  // }
+
 }
-// todo();
+
 
 
 //Write a function with two parameters(index, item) and for this function replace the item at the position 

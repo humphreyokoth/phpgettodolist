@@ -1,5 +1,5 @@
 <?php
-  $conn = OpenCon();
+  //$conn = OpenCon();
     // Getting all items for the Database
     $sql = "SELECT * FROM to_do_list_items";
    
@@ -9,10 +9,11 @@
     if ($result->num_rows > 0) {
         // output data of each row
         return $row = $result->fetch_assoc();
-        echo ' successful retrieved.';
+        //echo ' successful retrieved.';
        
       } else {
         echo "0 results";
       }
 
     ?>
+

@@ -16,23 +16,8 @@
     require_once("./introphp.php");
     include ('./db_connnection.php');
      $conn = OpenCon();
-//    // Checking form with input.
-//     $input = isset($_POST["item"])?$_POST["item"]:null;
-//     error_log($input."\n",3,"./php_error.log");
-    
-//     //Inserting items into my todolist table in the database.
-//     $sql = "INSERT INTO to_do_list_items(`title`) VALUES ('$input')";
-   
-//     $result = $conn->query($sql);
-//     var_dump($result);
-//     error_log($result."\n",3,"./php_error.log");
 
-//     if ($result) {
-//         echo ' successful.';
-//     } else {
-//         echo 'ERROR:'.$sql.'\n'. $conn->close();
-//     }
-//     ?>
+    ?>
     <?php
 // include 'addTodos.php';
  include 'getTodos.php';
@@ -69,7 +54,7 @@
 
                 <ul class="list-li" id="task">
                     <?php 
-                    $list = todo();
+                    //$list = todo();
                     $result->fetch_assoc();
                      while($row = $result->fetch_assoc()) { ?>
                         <li>
