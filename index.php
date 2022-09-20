@@ -19,12 +19,12 @@
 
     ?>
     <?php
- //include 'addTodos.php';
+
  include 'getTodos.php';
-?>
+?> 
 
     <div class="container">
-        <form  method="post" class="addTask" id="addForm" name="todoList">
+        <form  method="post" action="addTodos.php" class="addTask" id="addForm" name="todoList">
             <div class="row">
                 <div class="col-1">
                     <input type="checkbox" name="checkbox" id="todo-checkbox" checked /><label class="label-1">
