@@ -19,12 +19,12 @@
 
     ?>
     <?php
-// include 'addTodos.php';
+ //include 'addTodos.php';
  include 'getTodos.php';
 ?>
 
     <div class="container">
-        <form  method="get" action="getTodos.php"  class="addTask" id="addForm" name="todoList">
+        <form  method="post" class="addTask" id="addForm" name="todoList">
             <div class="row">
                 <div class="col-1">
                     <input type="checkbox" name="checkbox" id="todo-checkbox" checked /><label class="label-1">
@@ -38,7 +38,7 @@
                     <button type="submit" class="submit" id="submit" value="submit">Add</button>
                 </div>
             </div>
-        </form>
+     
         <hr />
 
         <div class="counter">
@@ -60,11 +60,12 @@
                         <li>
                             <input type="checkbox" name="checkbox" id="list-1" />
 
-                            <label class="label-2"> <?php  echo "id: " . $row["id"]. " - title: " . $row["title"]. " " . $row["date_added"]. "<br>";?></label>
+                            <label class="label-2"> <?php  echo  $row["title"].  "<br>";?></label> <span><?php echo  $row["date_added"] ?></span>
                             <i class="fa-solid fa-trash-can deleteIcon"></i>
 
                             <i class="fa-solid fa-pencil editIcon "></i>
-                            <!-- <?php echo  $row["date_added"] ?> -->
+                            
+                           
 
                         </li>
                     <?php } ?>
@@ -75,8 +76,7 @@
         </div>
 
     </div>
-
-</body>
+    </form>
 </body>
 
 </html>

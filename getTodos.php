@@ -1,5 +1,6 @@
 <?php
-  //$conn = OpenCon();
+//  include('./db_connnection.php');
+// $conn = OpenCon();
     // Getting all items for the Database
     $sql = "SELECT * FROM to_do_list_items";
    
