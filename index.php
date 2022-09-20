@@ -38,7 +38,7 @@
                     <button type="submit" class="submit" id="submit" value="submit">Add</button>
                 </div>
             </div>
-     
+            </form>
         <hr />
 
         <div class="counter">
@@ -76,7 +76,8 @@
         </div>
 
     </div>
-    </form>
+  
+<script src="./ajax.js"></script>
 </body>
 
 </html>
