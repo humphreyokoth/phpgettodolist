@@ -59,15 +59,18 @@
                      while($row = $result->fetch_assoc()) { ?>
                         <li>
                             <input type="checkbox" name="checkbox" id="list-1" />
-
-                            <label class="label-2"> <?php  echo  $row["title"].  "<br>";?></label> <span><?php echo  $row["date_added"] ?></span>
+                            <span><?php echo  $row["date_added"] ?></span>
                             <i class="fa-solid fa-trash-can deleteIcon"></i>
-
                             <i class="fa-solid fa-pencil editIcon "></i>
+                            <label class="label-2"> <?php  echo  $row["title"].  "<br>";?></label> 
+                            
+                            
                             
                            
 
                         </li>
+
+       
                     <?php } ?>
                 </ul>
             </div>
